@@ -19,6 +19,19 @@ class ReverseLinkedList1 {
         node = prev;
         return node;
     }
+   //Function to reverse by recursion
+    static Node reverseRecursive(Node head)
+    {
+        if (head == null || head.next == null)
+            return head;
+
+        Node rest = reverse(head.next);
+        head.next.next = head;
+
+        head.next = null;
+
+        return rest;
+    }
 
     // prints content of double linked list
     static void printList(Node node)
@@ -39,7 +52,13 @@ class ReverseLinkedList1 {
 
         System.out.println("Given Linked list");
         printList(head);
+        //iterative call
         head = reverse(head);
+        System.out.println("");
+        System.out.println("Reversed linked list ");
+        printList(head);
+        //recursion call
+        head = reverseRecursive(head);
         System.out.println("");
         System.out.println("Reversed linked list ");
         printList(head);
