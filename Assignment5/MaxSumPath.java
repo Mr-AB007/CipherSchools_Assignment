@@ -1,4 +1,4 @@
-package Trees;
+
 
 public class MaxSumPath {
     static int max = Integer.MIN_VALUE;
