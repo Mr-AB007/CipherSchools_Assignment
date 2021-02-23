@@ -43,7 +43,6 @@ public class MinJumptoEnd {
             System.out.println("Enter the Elements of array");
             for(int i = 0; i <n ;i++)
                 arr[i]= sc.nextInt();
-            System.out.println("Minimum number of jumps to reach end is : "
-                    + minJumps(arr, arr.length));
+            System.out.println("Minimum jumps to reach end is : "+ minJumps(arr, arr.length));
         }
     }
